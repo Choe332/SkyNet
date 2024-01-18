@@ -1,0 +1,13 @@
+import smtplib
+from email.message import EmailMessage
+
+msg = EmailMessage()
+msg.set_content('Hello, this is a test email!')
+
+msg['Subject'] = 'Test Email'
+msg['From'] = 'sender@example.com'
+msg['To'] = 'recipient@example.com'
+
+s = smtplib.SMTP('localhost')
+s.send_message(msg)
+s.quit()
