@@ -1,4 +1,4 @@
-import smtplib #1
+import smtplib #
 from email.message import EmailMessage
 
 msg = EmailMessage()
